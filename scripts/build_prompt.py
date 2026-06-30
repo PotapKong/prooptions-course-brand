@@ -16,17 +16,22 @@ def load_json(path: str | Path) -> dict:
 
 def compact_prompt(brief: dict, tokens: dict) -> str:
     pal = tokens["palette"]
+    logo = tokens.get("canonical_logo", {})
     palette_line = ", ".join([
         f"{name} {data['hex']}" for name, data in pal.items()
-        if name in ["base_black", "deep_green", "terminal_green", "warm_white", "graphite_gray", "champagne_gold", "risk_red", "data_blue"]
+        if name in [
+            "base_black", "deep_green", "terminal_green", "warm_white", "graphite_gray",
+            "champagne_gold", "course_logo_gold", "course_logo_white", "risk_red", "data_blue"
+        ]
     ])
     avoid = brief.get("avoid") or tokens.get("banned_motifs", [])
     must_have = brief.get("must_have", [])
     refs = []
     if brief.get("person_reference"):
         refs.append(f"person refs: {brief['person_reference']}")
-    if brief.get("logo_reference"):
-        refs.append(f"logo refs: {brief['logo_reference']}")
+    logo_ref = brief.get("logo_reference") or logo.get("reference_file")
+    if logo_ref:
+        refs.append(f"canonical course logo: {logo_ref}")
 
     lines = [
         f"Create {brief.get('format', '16:9')} {brief.get('asset_type', 'visual')} for Pro Options beginner course.",
@@ -43,6 +48,14 @@ def compact_prompt(brief: dict, tokens: dict) -> str:
         lines.append(f"Main visual object: {brief['visual_object']}")
     if brief.get("mentor"):
         lines.append(f"Mentor: {brief['mentor']}; preserve identity if photo reference is provided.")
+
+    if logo:
+        lines.append(
+            "Logo lockup: use the canonical provided logo exactly: "
+            f"{logo.get('main_text', 'ПРО ОПЦИОНЫ')} with ПРО white and ОПЦИОНЫ gold, "
+            f"subtitle {logo.get('subtitle', 'для начинающих')} in white, thin geometric sans, wide tracking, centered."
+        )
+
     lines.extend([
         f"Palette: {palette_line}.",
         "Composition: large readable title, one main visual object, subtle terminal grid, lots of negative space.",
@@ -51,9 +64,9 @@ def compact_prompt(brief: dict, tokens: dict) -> str:
     if must_have:
         lines.append("Must have: " + "; ".join(must_have) + ".")
     if refs:
-        lines.append("Use external references, do not redraw logos: " + "; ".join(refs) + ".")
+        lines.append("Use external references/assets, do not redraw logos from memory: " + "; ".join(refs) + ".")
     lines.append("Avoid: " + "; ".join(avoid) + ".")
-    lines.append("No small text clutter. No profit guarantees. Red only for risk markers.")
+    lines.append("No small text clutter. No profit guarantees. Red only for risk markers. Never alter the canonical logo text, colors or proportions.")
     return "\n".join(lines)
 
 
@@ -62,6 +75,7 @@ def full_prompt(brief: dict, tokens: dict) -> str:
         "The visual should reduce beginner anxiety and make options feel structured.",
         "The course should look like a professional trading desk, not like trading signals.",
         "Use dark graphite as the base, green for market logic, gold for premium micro-accents, red only for risk.",
+        "The logo is a fixed asset and should not be reinterpreted.",
     ])
 
 
