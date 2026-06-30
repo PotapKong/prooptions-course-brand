@@ -1,0 +1,12 @@
+{
+  "format": "1080x1350",
+  "asset_type": "module_cover",
+  "module_number": "01",
+  "title": "ЧТО ТАКОЕ ОПЦИОНЫ",
+  "subtitle": "Call, Put, страйк и экспирация простым языком",
+  "product_label": "Базовый курс · Pro Опционы",
+  "visual_object": "two cards: CALL and PUT + simple strike line",
+  "audience": "absolute beginners",
+  "mood": ["clean", "educational", "market", "premium"],
+  "avoid": ["overloaded charts", "trading signals", "neon", "profit promises"]
+}
