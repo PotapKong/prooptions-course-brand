@@ -8,8 +8,9 @@
   "mentor": "Сэм Шарипов",
   "visual_object": "payoff curve + option chain card",
   "person_reference": "references/sam_photos/",
-  "logo_reference": "brand/logos/",
+  "logo_reference": "brand/logos/pro-options/pro-options-for-beginners-logo-reference.svg",
+  "logo_spec": "brand/logos/pro-options/logo-spec.json",
   "mood": ["premium", "calm", "terminal", "risk-aware", "beginner-friendly"],
-  "must_have": ["large readable headline", "dark graphite background", "terminal grid", "single main visual object", "no visual clutter"],
+  "must_have": ["large readable headline", "dark graphite background", "terminal grid", "single main visual object", "canonical course logo unchanged", "no visual clutter"],
   "avoid": ["rocket", "cash", "casino", "aggressive red", "crypto neon", "office glam", "guaranteed profit"]
 }
