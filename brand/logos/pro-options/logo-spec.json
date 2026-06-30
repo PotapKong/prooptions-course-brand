@@ -1,0 +1,45 @@
+{
+  "logo_name": "Pro Options for Beginners",
+  "reference_file": "brand/logos/pro-options/pro-options-for-beginners-logo-reference.svg",
+  "source_reference": "uploaded course logo image from 2026-06-30",
+  "usage": "Use this as the canonical logo reference for all course visuals. Do not redraw from memory.",
+  "text": {
+    "main": "ПРО ОПЦИОНЫ",
+    "subtitle": "для начинающих",
+    "case": "main title uppercase, subtitle lowercase",
+    "letter_spacing": "very wide tracking",
+    "alignment": "centered"
+  },
+  "colors": {
+    "background": "#070A0D",
+    "background_soft_center": "#101923",
+    "white_text": "#F1F1F3",
+    "gold_text": "#EDB65B",
+    "gold_line": "#EDB65B"
+  },
+  "typography": {
+    "style": "thin geometric sans / premium wide tracking",
+    "font_stack": ["Inter", "Manrope", "Montserrat", "Arial", "sans-serif"],
+    "main_weight": 400,
+    "subtitle_weight": 400,
+    "note": "Do not use bold, condensed, handwritten, serif or decorative fonts for the logo. If the exact original font is unavailable, keep thin geometric sans, wide tracking, centered layout."
+  },
+  "layout": {
+    "canvas_ratio": "1:1",
+    "safe_area": "logo group centered, large empty dark field around it",
+    "main_title_position": "center",
+    "divider": "short centered gold line below main title",
+    "subtitle_position": "below divider",
+    "minimal_clear_space": "at least one main-letter height around logo group"
+  },
+  "rules": [
+    "Use the logo reference file for course identity consistency.",
+    "Never replace the logo with another Pro Options mark unless the user provides it.",
+    "Do not change the split: ПРО is white, ОПЦИОНЫ is gold.",
+    "Do not change subtitle text: для начинающих.",
+    "Do not add icons, candles, rockets, money, arrows or extra text inside the logo group.",
+    "Do not use red in the logo.",
+    "Do not stretch horizontally or vertically.",
+    "Do not place on noisy backgrounds without dark overlay."
+  ]
+}
