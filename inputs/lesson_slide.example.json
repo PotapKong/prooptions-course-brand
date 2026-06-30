@@ -1,0 +1,10 @@
+{
+  "format": "16:9",
+  "asset_type": "lesson_slide",
+  "lesson_topic": "Strike price",
+  "title": "СТРАЙК",
+  "body": "Цена, по которой можно купить или продать базовый актив по опциону.",
+  "visual_object": "horizontal price line with strike marker",
+  "audience": "beginners",
+  "max_words": 35
+}
