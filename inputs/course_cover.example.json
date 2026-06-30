@@ -1,0 +1,15 @@
+{
+  "format": "16:9",
+  "asset_type": "course_cover",
+  "audience": "beginners who want to understand exchange options without hype",
+  "title": "ОПЦИОНЫ С НУЛЯ",
+  "subtitle": "От Call и Put до первых стратегий и управления риском",
+  "product_label": "Базовый курс · Pro Опционы",
+  "mentor": "Сэм Шарипов",
+  "visual_object": "payoff curve + option chain card",
+  "person_reference": "references/sam_photos/",
+  "logo_reference": "brand/logos/",
+  "mood": ["premium", "calm", "terminal", "risk-aware", "beginner-friendly"],
+  "must_have": ["large readable headline", "dark graphite background", "terminal grid", "single main visual object", "no visual clutter"],
+  "avoid": ["rocket", "cash", "casino", "aggressive red", "crypto neon", "office glam", "guaranteed profit"]
+}
